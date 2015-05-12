@@ -1,0 +1,6 @@
+{
+	"name": "another-sequelize-restful",
+	"dependencies": {
+		"underscore": "latest"
+	}
+}
