@@ -19,9 +19,13 @@ npm install new-sequelize-restful
 3. By default, the route should has this format: 
 
 /whatever-string/model-name/ 
+
 or
 /whatever-string/model-name/id
+
+
 examples:
+
 /api/staff, /api/staff/1
 
 
