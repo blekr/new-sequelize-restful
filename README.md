@@ -140,3 +140,29 @@ $ curl --header 'Content-Type: application/json' -d '{"account":"acct","password
 	"role":1
 }
 ```
+
+### HEAD /api/staff
+Returns a description of the model
+```console
+$ curl -i -X HEAD http://127.0.0.1:8090/api/staff
+```
+```js
+{ id: { type: 'INT(11)', allowNull: false, defaultValue: null },
+	img: { type: 'MEDIUMTEXT', allowNull: true, defaultValue: null },
+	account: { type: 'VARCHAR(64)', allowNull: false, defaultValue: null },
+	password: { type: 'VARCHAR(64)', allowNull: false, defaultValue: null },
+	name: { type: 'VARCHAR(64)', allowNull: false, defaultValue: null },
+	role: { type: 'INT(11)', allowNull: false, defaultValue: null },
+	createAt: { 
+		type: 'TIMESTAMP',
+		allowNull: false,
+		defaultValue: 'CURRENT_TIMESTAMP' 
+	},
+	lastLogin: { 
+		type: 'TIMESTAMP',
+		allowNull: false,
+		defaultValue: '0000-00-00 00:00:00' 
+	},
+	loginCnt: { type: 'INT(11)', allowNull: false, defaultValue: null }
+}
+```
