@@ -46,7 +46,7 @@ Remember that:
 
 
 ### GET /api/staff
-Return all instances in an array.<br>
+Return an array of all instances
 ```console
 # curl http://127.0.0.1:8090/api/staff
 ```
