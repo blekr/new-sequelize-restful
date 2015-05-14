@@ -16,7 +16,7 @@ npm install new-sequelize-restful
 
 1. Import new-sequelize-restful module
 2. Route your path, e.g. '/api/staff', to new Restful(sequelize)).route()
-3. By default, the route should has this format: "/whatever-string/model-name" or "/whatever-string/model-name/id". Examples:
+3. By default, the route should has this format: <br>"/whatever-string/model-name" <br>or <br>"/whatever-string/model-name/id". <br>Examples:
 "/api/staff", "/api/staff/1"
 
 
@@ -43,6 +43,8 @@ Remember that:
 
 1. It returns '200 OK' with instance or instances(depending on the request of a singel object or a collection) as content for positive(successfull) responses.
 2. It returns '403 Forbidden', '500 Internal Server Error' and other standard HTTP response codes with error message as content for negative(some errors has happened) responses;
+
+
 ### GET /api/staff
 Return all instances in a array.
 The Pagination information is stored in Range header when request and Content-Range header when response. Please see 'angular-paginate-anything' 
