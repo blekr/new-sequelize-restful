@@ -37,8 +37,10 @@ app.listen(80);
 ```
 
 ## The Restful APIs
-We take 'staff' model for example.
+We take 'staff' model for example. <br>
 Remember that:
+
+
 1. It returns '200 OK' with instance or instances(depending on the request of a singel object or a collection) as content for positive(successfull) responses.
 2. It returns '403 Forbidden', '500 Internal Server Error' and other standard HTTP response codes with error message as content for negative(some errors has happened) responses;
 ### GET /api/staff
