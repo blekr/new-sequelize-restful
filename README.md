@@ -234,7 +234,7 @@ $ curl -X DELETE 'http://127.0.0.1:8090/api/staff/1'
 ### PUT /api/staff/1
 Updates a instance with id 1
 ```console
-$ curl -X DELETE 'http://127.0.0.1:8090/api/staff/1'
+$ curl -X PUT --header 'Content-Type: application/json' -d '{"name":"new name"}' 'http://127.0.0.1:8090/api/staff/1'
 ```
 ```js
 {
