@@ -16,18 +16,8 @@ npm install new-sequelize-restful
 
 1. Import new-sequelize-restful module
 2. Route your path, e.g. '/api/staff', to new Restful(sequelize)).route()
-3. By <span style="color: #F00">default</span>, the route should has this format: 
-
-/whatever-string/model-name 
-
-or
-
-/whatever-string/model-name/id
-
-
-examples:
-
-/api/staff, /api/staff/1
+3. By <span style="color: #F00">fdefault</span>, the route should has this format: "/whatever-string/model-name" or "/whatever-string/model-name/id". Examples:
+"/api/staff", "/api/staff/1"
 
 
 
