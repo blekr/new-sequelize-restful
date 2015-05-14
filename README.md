@@ -46,8 +46,32 @@ Remember that:
 
 
 ### GET /api/staff
-Return all instances in a array.
-The Pagination information is stored in Range header when request and Content-Range header when response. Please see 'angular-paginate-anything' 
+Return all instances in an array.<br>
+```console
+#curl http://127.0.0.1:8090/api/staff
+```
+```js
+[{
+"id":1,
+"account":"account1",
+"password":"123456",
+"name":"小张",
+"role":1,
+"createAt":"2015-05-06T13:57:37.000Z",
+"lastLogin":"2015-05-06T13:57:37.000Z",
+"loginCnt":1
+},{
+"id":2,
+"account":"account2",
+"password":"12wfde",
+"name":"小黄",
+"role":1,
+"createAt":"2015-05-06T13:58:15.000Z",
+"lastLogin":"2015-05-06T13:58:15.000Z",
+"loginCnt":1
+}]
+```
+The Pagination information is stored in Range header when request and Content-Range header when response. Go to ['angular-paginate-anything'](https://github.com/begriffs/angular-paginate-anything) for more information.
 ```console
 #curl 
 ```
