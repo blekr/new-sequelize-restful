@@ -182,7 +182,8 @@ Returns a description of the model
 $ curl -i -X HEAD http://127.0.0.1:8090/api/staff
 ```
 ```js
-{ id: { type: 'INT(11)', allowNull: false, defaultValue: null },
+{ 
+	id: { type: 'INT(11)', allowNull: false, defaultValue: null },
 	img: { type: 'MEDIUMTEXT', allowNull: true, defaultValue: null },
 	account: { type: 'VARCHAR(64)', allowNull: false, defaultValue: null },
 	password: { type: 'VARCHAR(64)', allowNull: false, defaultValue: null },
