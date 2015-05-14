@@ -162,7 +162,7 @@ $ curl 'http://127.0.0.1:8090/api/staff?$sort=-id'
 
 
 ### POST /api/staff
-Create a new instance.
+Creates a new instance.
 ```console
 $ curl --header 'Content-Type: application/json' -d '{"account":"acct","password":"123","name":"jon","role":1}' -X POST http://www.scaleoa.com:8090/api/staff
 ```
@@ -204,3 +204,47 @@ $ curl -i -X HEAD http://127.0.0.1:8090/api/staff
 
 
 ### GET /api/staff/1
+Returns the instance with id 1
+```console
+curl 'http://127.0.0.1:8090/api/staff/1'
+```
+```js
+{
+	"id":1,
+	"account":"account1",
+	"password":"123456",
+	"name":"tom",
+	"role":1,
+	"createAt":"2015-05-06T13:57:37.000Z",
+	"lastLogin":"2015-05-06T13:57:37.000Z",
+	"loginCnt":1
+}
+```
+
+### DELETE or DEL /api/staff/1
+Destroys a instance with id 1
+```console
+$ curl -X DELETE 'http://127.0.0.1:8090/api/staff/1'
+```
+```js
+{}
+```
+
+
+### PUT /api/staff/1
+Updates a instance with id 1
+```console
+$ curl -X DELETE 'http://127.0.0.1:8090/api/staff/1'
+```
+```js
+{
+	"id":1,
+	"account":"account1",
+	"password":"123456",
+	"name":"new name",
+	"role":1,
+	"createAt":"2015-05-06T13:57:37.000Z",
+	"lastLogin":"2015-05-06T13:57:37.000Z",
+	"loginCnt":1
+}
+```
