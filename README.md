@@ -48,7 +48,7 @@ Remember that:
 ### GET /api/staff
 Return all instances in an array.<br>
 ```console
-#curl http://127.0.0.1:8090/api/staff
+# curl http://127.0.0.1:8090/api/staff
 ```
 ```js
 [{
@@ -71,6 +71,23 @@ Return all instances in an array.<br>
 	"loginCnt":1
 }]
 ```
+You can add parameters to the requests. Complex Sequelize's nested query is supported.<br>
+1. All leading underlines '\_'in keys are stripped, e.g. "http://127.0.0.1:8090/api/staff?\_name=tom" is equal to "http://127.0.0.1:8090/api/staff?name=tom". Because some client side codes do not allow JSON keys with leading '$' such as '$or' and '$and' while Sequelize actually has $or and $and. In this case, you can wrap these keys with leading '\_', e.g. '\_$or' and '\_$and'.
+2. All values will be parseJSONed if they are of type string and can be parseJSONed safely without error.<br>
+For example:<br>
+```console
+curl 'http://127.0.0.1:8090/api/staff?_name=abc2&account=\{"$like":"%ab%"\}'
+```
+will result the query in the server: 
+```js
+{ 
+	account: { 
+		'$like': '%ab%' 
+	}, 
+	name: 'abc2' 
+}
+```
+
 The Pagination information is stored in Range header when request and Content-Range header when response. Go to ['angular-paginate-anything'](https://github.com/begriffs/angular-paginate-anything) for more information.
 ```console
 #curl 
