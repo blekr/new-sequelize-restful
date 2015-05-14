@@ -82,7 +82,7 @@ For example:<br>
 ```console
 curl 'http://127.0.0.1:8090/api/staff?_name=abc2&account=\{"$like":"%ab%"\}'
 ```
-will result the query in the server: 
+will result the where object in the Sequelize: 
 ```js
 { 
 	account: { 
@@ -123,4 +123,20 @@ Connection: keep-alive
 	"lastLogin":"0000-00-00 00:00:00",
 	"loginCnt":0
 }]
+```
+
+
+### POST /api/staff
+Create a new instance.
+```console
+$ curl --header 'Content-Type: application/json' -d '{"account":"acct","password":"123","name":"jon","role":1}' -X POST http://www.scaleoa.com:8090/api/staff
+```
+```js
+{
+	"id":20,
+	"account":"acct",
+	"password":"123",
+	"name":"jon",
+	"role":1
+}
 ```
