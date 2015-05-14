@@ -125,6 +125,41 @@ Connection: keep-alive
 }]
 ```
 
+Sorting by a specified column descending or ascending
+```console
+$ curl 'http://127.0.0.1:8090/api/staff?$sort=-id'
+```
+```js
+[{
+	"id":20,
+	"account":"acct",
+	"password":"123",
+	"name":"jon",
+	"role":1,
+	"createAt":"2015-05-14T05:23:49.000Z",
+	"lastLogin":"0000-00-00 00:00:00",
+	"loginCnt":0
+},{
+	"id":19,
+	"account":"ddd",
+	"password":"123",
+	"name":"noname",
+	"role":0,
+	"createAt":"2015-05-13T11:24:00.000Z",
+	"lastLogin":"0000-00-00 00:00:00",
+	"loginCnt":0
+},{
+	"id":18,
+	"account":"vv",
+	"password":"vv",
+	"name":"vv",
+	"role":0,
+	"createAt":"2015-05-12T02:07:59.000Z",
+	"lastLogin":"0000-00-00 00:00:00",
+	"loginCnt":0
+}]
+```
+
 
 ### POST /api/staff
 Create a new instance.
@@ -166,3 +201,6 @@ $ curl -i -X HEAD http://127.0.0.1:8090/api/staff
 	loginCnt: { type: 'INT(11)', allowNull: false, defaultValue: null }
 }
 ```
+
+
+### GET /api/staff/1
