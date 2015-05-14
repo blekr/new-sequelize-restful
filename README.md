@@ -92,7 +92,35 @@ will result the query in the server:
 }
 ```
 
+
+You can also add pagination information to the query.
 The Pagination information is stored in Range header when request and Content-Range header when response. Go to ['angular-paginate-anything'](https://github.com/begriffs/angular-paginate-anything) for more information.
 ```console
-#curl 
+# curl -v --header "Range: 0-10" 'http://127.0.0.1:8090/api/staff?_name=abc2&account=\{"$like":"%ab%"\}'
+```
+Response:
+```console
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Accept-Ranges: items
+Range-Unit: items
+Content-Range: 0-0/1
+Content-Type: application/json; charset=utf-8
+Content-Length: 153
+ETag: W/"99-28f12ee1"
+set-cookie: connect.sid=s%3AA-SdrqRTV-avX_1O_KepGhoKlQFBVsEU.VDvv64%2BZuHN63Dnz8qTjYt9WDhWhD04z1VzpQcxwbW8; Path=/; HttpOnly
+Date: Thu, 14 May 2015 05:09:11 GMT
+Connection: keep-alive
+```
+```js
+[{
+	"id":16,
+	"account":"abc2",
+	"password":"123",
+	"name":"abc2",
+	"role":0,
+	"createAt":"2015-05-10T03:52:37.000Z",
+	"lastLogin":"0000-00-00 00:00:00",
+	"loginCnt":0
+}]
 ```
