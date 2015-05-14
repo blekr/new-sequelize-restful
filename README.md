@@ -74,7 +74,7 @@ Return an array of all instances
 You can add parameters to the requests. Complex Sequelize's nested query is supported.<br>
 
 
-1. All leading underlines '\_'in keys are stripped, e.g. 'http://127.0.0.1:8090/api/staff?\_name=tom' is equal to 'http://127.0.0.1:8090/api/staff?name=tom'. Because some client side codes do not allow JSON keys with leading '$' such as '$or' and '$and' while Sequelize actually has $or and $and. In this case, you can wrap these keys with leading '\_', e.g. '\_$or' and '\_$and'.
+1. All leading underlines '\_'in keys are stripped, e.g. 'http://127.0.0.1:8090/api/staff?_name=tom' is equal to 'http://127.0.0.1:8090/api/staff?name=tom'. Because some client side codes do not allow JSON keys with leading '$' such as '$or' and '$and' while Sequelize actually has $or and $and. In this case, you can wrap these keys with leading '\_', e.g. '\_$or' and '\_$and'.
 
 
 2. All values will be parseJSONed if they are of type string and can be parseJSONed safely without error.<br>
