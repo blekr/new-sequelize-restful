@@ -46,7 +46,7 @@ Remember that:
 
 
 ### GET /api/staff
-Return an array of all instances
+Return an array of all instances. Total number of rows can be read from Content-Range header in response.
 ```console
 # curl http://127.0.0.1:8090/api/staff
 ```
@@ -94,7 +94,7 @@ will result the where object in the Sequelize:
 
 
 You can also add pagination information to the query.
-The Pagination information is stored in Range header when request and Content-Range header when response. Go to ['angular-paginate-anything'](https://github.com/begriffs/angular-paginate-anything) for more information.
+The Pagination information is stored in Range header (includes offset, limit) when request and Content-Range header (includes offset, limit, total-count) when response. Go to ['angular-paginate-anything'](https://github.com/begriffs/angular-paginate-anything) for more information.
 ```console
 # curl -v --header "Range: 0-10" 'http://127.0.0.1:8090/api/staff?_name=abc2&account=\{"$like":"%ab%"\}'
 ```
