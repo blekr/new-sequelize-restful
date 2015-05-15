@@ -4,7 +4,7 @@
     "underscore": "latest"
   },
   "description": "Exports standard restful APIs for Sequelize models",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "lib/route.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
