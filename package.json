@@ -14,7 +14,8 @@
     "url": "https://github.com/blekr/new-sequelize-restful.git"
   },
   "keywords": [
-    "sequelize"
+    "sequelize",
+		"restful"
   ],
   "author": "wenchengsheng <407375207@qq.com>",
   "license": "GNU GENERAL PUBLIC LICENSE",
