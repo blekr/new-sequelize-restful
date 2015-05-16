@@ -78,7 +78,7 @@ You can add parameters to the requests. Complex Sequelize's nested query is supp
 
 
 2. All values will be parseJSONed if they are of type string and can be parseJSONed safely without error.<br>
-For example: ('\' is just for shell escape)<br>
+For example: ('\\' is just for shell escape)<br>
 ```console
 curl 'http://127.0.0.1:8090/api/staff?_name=abc2&account=\{"$like":"%ab%"\}'
 ```
