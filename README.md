@@ -1,9 +1,9 @@
 # new-restful-sequelize
 new-restful-sequelize is a module that exports restful APIs for your Sequelize models quickly, inspired by sequelize-reftful-extended but not a fork of that. In addition to sequelize-restful-extended: 
 
-It fully supports Sequelize's complex nested querys, including operators such as $gt, $lt, $like, $in and combinations such as $or, and handles pagination in a more standard way, i.e. by Range header in HTTP request and Content-Range header in HTTP response. This is very useful wen you are doing pagination in browser using angular-paginate-anything module. 
+It fully supports Sequelize's complex nested querys, including operators such as $gt, $lt, $like, $in and combinations such as $or, and handles pagination in a more standard way, i.e. by Range header in HTTP request and Content-Range header in HTTP response. This is very useful wen you are doing pagination in browser using [angular-paginate-anything](https://github.com/begriffs/angular-paginate-anything) module. 
 
-It returns negative responses by sending '403 Forbidden', '500 Internal Server Error' and other standard HTTP response codes instead of sending '200 OK' with extra information saying that some errors have happened. This allows us to return positive responses by seding instance or array of instances directly without tedious extra information. This is extremely important in angular ngResource.
+It returns negative responses by sending '403 Forbidden', '500 Internal Server Error' and other standard HTTP response codes instead of sending '200 OK' with extra information saying that some errors have happened. This allows us to return positive responses by seding instance or array of instances directly without tedious extra information. This is extremely important in angular [ngResource](https://docs.angularjs.org/api/ngResource/service/$resource).
 
 # Install
 ```console
