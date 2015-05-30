@@ -1,5 +1,5 @@
-# new-restful-sequelize
-new-restful-sequelize is a module that exports restful APIs for your [Sequelize](http://docs.sequelizejs.com/en/latest/) models quickly, inspired by [sequelize-restful-extended](https://github.com/pjanaya/sequelize-restful-extended) but not a fork of that. In addition to sequelize-restful-extended: 
+# new-sequelize-restful
+new-sequelize-restful is a module that exports restful APIs for your [Sequelize](http://docs.sequelizejs.com/en/latest/) models quickly, inspired by [sequelize-restful-extended](https://github.com/pjanaya/sequelize-restful-extended) but not a fork of that. In addition to sequelize-restful-extended: 
 
 It fully supports Sequelize's complex nested querys, including operators such as $gt, $lt, $like, $in and combinations such as $or, and handles pagination in a more standard way, i.e. by Range header in HTTP request and Content-Range header in HTTP response. This is very useful wen you are doing pagination in browser using [angular-paginate-anything](https://github.com/begriffs/angular-paginate-anything) module. 
 
